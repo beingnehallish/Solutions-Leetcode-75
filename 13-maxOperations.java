@@ -1,3 +1,5 @@
+//MAX NO. OF K-SUM PAIRS => [1,2,3,4] & K=5 => 1+4=5 and 2+3=5 => no. of k-sum pairs = 2
+
 class Solution {
   public int maxOperations(int[] nums, int k) {
         for (int i = 0 ; i < nums.length ; i++){
