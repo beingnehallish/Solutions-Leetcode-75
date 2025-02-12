@@ -1,19 +1,22 @@
 class Solution {
     public String reverseWords(String s) {
-        char[] source = s.toCharArray();
-        StringBuilder stringBuilder = new StringBuilder();
-        int left = 0, right = source.length-1;
+        char[] ch = s.toCharArray();
+        StringBuilder str = new StringBuilder();
+        int left = 0, right = ch.length-1;
         while(right >= 0){
-            while(right >= 0 && source[right] == ' ') right--;
-            if(right < 0) break;
+            while(right >= 0 && ch[right] == ' ') 
+                right--;
+            if(right < 0) 
+                break;
             left = right;
-            while(right >= 0 && source[right] != ' ') right--;
+            while(right >= 0 && ch[right] != ' ')
+                right--;
             for(int i=right+1;i<=left;i++){
-                stringBuilder.append(source[i]);
+                str.append(ch[i]);
             }
-            stringBuilder.append(' ');
+            str.append(' ');
         }
-        return stringBuilder.substring(0, stringBuilder.length()-1);
+        return str.substring(0, str.length()-1);
     }
 
 OR
